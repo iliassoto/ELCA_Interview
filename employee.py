@@ -28,7 +28,6 @@ class Person:
             b = csv.writer(file)
             b.writerow([new_person.id, new_person.name, new_person.age, new_person.department])
 
-# Example usage
 file_path = 'employees.csv'
 
 
