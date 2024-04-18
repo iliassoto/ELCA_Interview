@@ -9,7 +9,7 @@ class Person:
         self.email = email
 
     @staticmethod
-    def read_persons_from_csv(file_path):
+    def read_db(file_path):
         a = []
         with open(file_path, 'r') as file:
             b = csv.DictReader(file)
@@ -19,7 +19,7 @@ class Person:
         return a
 
     @staticmethod
-    def add_person_to_csv(file_path, new_person):
+    def add_to_db(file_path, new_person):
         a = Person.read_persons_from_csv(file_path)
         for person in a:
             if person.name == new_person.name and person.email == new_person.email:
