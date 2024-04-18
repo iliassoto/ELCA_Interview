@@ -1,0 +1,4 @@
+id,name,age,department,email
+1,Alice,25,HR,alice@example.com
+2,Bob,35,Finance,bob@example.com
+3,Charlie,40,IT,charlie@example.com
