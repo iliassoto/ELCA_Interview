@@ -8,6 +8,8 @@ class Person:
         self.department = department
         self.email = email
 
+    file_path = 'employees.csv'
+
     @staticmethod
     def read_db(file_path):
         a = []
@@ -18,23 +20,12 @@ class Person:
                 a.append(c)
         return a
 
-    @staticmethod
-    def add_to_db(file_path, new_person):
+    def f(self, file_path):
         a = Person.read_persons_from_csv(file_path)
         for person in a:
-            if person.name == new_person.name and person.email == new_person.email:
+            if person.name == self.name and person.email == self.email:
                 raise ValueError("Person already exists in the CSV file.")
         with open(file_path, 'a', newline='') as file:
             b = csv.writer(file)
-            b.writerow([new_person.id, new_person.name, new_person.age, new_person.department])
+            b.writerow([self.id, self.name, self.age, self.department])
 
-file_path = 'employees.csv'
-
-
-def add(name, age, dept, email):
-    new_person = Person("John Doe", 30, "IT", "john.doe@elca.com")
-    try:
-        Person.add_person_to_csv(file_path, new_person)
-        print("Person added successfully.")
-    except ValueError as e:
-        print(e)
