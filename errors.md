@@ -1,0 +1,10 @@
+- Variable naming, parameters naming.
+- Method naming.
+- Class should be called Employee instead of Person.
+- Comments.
+- Edge case: A single employee is defined by ist id, not by it's name and Email.
+- Bugfix: Email is missing when writing a row to the CSV file.
+- To discuss: add_to_db should be a static method? Design-wise maybe not the best. This method should be in a separate class that handles the "DB".
+- Hardcoded file_path
+- Close filereaders as soon as the information is needed.
+- Return types as hints
